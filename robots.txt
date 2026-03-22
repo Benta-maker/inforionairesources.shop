@@ -1,0 +1,89 @@
+# InfoOnAIResources — robots.txt
+# Strategic crawler configuration for AI-era discoverability
+# Block training crawlers. Allow search and retrieval crawlers.
+# Last updated: March 2026
+
+# ── AI TRAINING BOTS — BLOCK ─────────────────────────────────────
+# These bots scrape content for model training. We do not permit this.
+# Our content is original human intelligence — not available for training.
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: meta-externalagent
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: omgilibot
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+# ── AI SEARCH AND RETRIEVAL BOTS — ALLOW ─────────────────────────
+# These bots index content so AI agents can find and cite it.
+# This is exactly what we want — maximum discoverability.
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Gemini-Deep-Research
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# ── TRADITIONAL SEARCH — ALLOW ───────────────────────────────────
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# ── ALL OTHER BOTS — ALLOW ───────────────────────────────────────
+
+User-agent: *
+Allow: /
+
+# ── SITEMAPS ─────────────────────────────────────────────────────
+
+Sitemap: https://www.infoonairesources.shop/sitemap.xml

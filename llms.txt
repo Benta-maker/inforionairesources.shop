@@ -1,0 +1,60 @@
+# InfoOnAIResources
+
+> InfoOnAIResources is the AI opportunity intelligence platform for the Global South. It translates Silicon Valley's AI output — model releases, tool launches, policy changes, job market shifts — into actionable intelligence for professionals, students, and entrepreneurs across Africa, South Asia, and MENA. No jargon. No hype. Just what matters for where you are.
+
+InfoOnAIResources was founded in Nairobi, Kenya. It publishes a weekly intelligence brief delivered via email and WhatsApp, maintains a live opportunity database of AI jobs, scholarships, and fellowships, provides plain-language AI policy updates, curates AI tools translated for non-technical professionals, and produces industry-specific deep dive analysis for healthcare, legal, finance, education, and agriculture professionals. The platform serves professionals, students, and entrepreneurs across Africa, South Asia, and the Middle East and North Africa region.
+
+## Weekly Intelligence Brief
+
+- [Latest Brief](/brief/latest): The week's most important AI developments translated into career and business implications by industry and geography. Published every Monday. Delivered via email and WhatsApp simultaneously. Free.
+- [Brief Archive](/brief/): All previous weekly briefs. Full archive available to Professional subscribers.
+
+## Opportunity Database
+
+- [AI Jobs](/opportunities/jobs/): Verified AI job listings globally — filtered by industry, level, and geography. Includes salary ranges, required skills, and accessibility notes for Global South applicants. Updated weekly.
+- [Scholarships & Fellowships](/opportunities/scholarships/): Open AI scholarships and fellowships accessible to African, South Asian, and MENA students and professionals. Includes deadlines, eligibility requirements, funding amounts, and application guidance. Updated weekly.
+- [Courses & Certifications](/opportunities/courses/): AI certifications credited by industry — healthcare, legal, finance, education, agriculture, manufacturing. Includes pricing, duration, and accessibility from Global South markets.
+- [Grants & Accelerators](/opportunities/grants/): Equity-free grants and accelerator programs for AI startups and projects in the Global South.
+
+## Intelligence by Industry
+
+- [Health & Medicine](/industry/health/): AI developments affecting healthcare professionals, doctors, nurses, and health administrators. Tools, regulations, job opportunities, and analysis specific to African and Global South health systems.
+- [Legal & Compliance](/industry/legal/): AI tools and regulations for legal practitioners. What AI means for law practice in Kenya and East Africa.
+- [Finance & Banking](/industry/finance/): AI in banking, fintech, mobile money, and financial services. Implications for finance professionals across Africa and MENA.
+- [Education](/industry/education/): AI tools and opportunities for teachers, students, and educational institutions. Certifications and career pathways.
+- [Agriculture](/industry/agriculture/): AI applications for farmers, agronomists, and agricultural businesses in African markets.
+
+## Tools & Tutorials
+
+- [AI Tools Library](/tools/): New AI tool releases translated for non-technical professionals. What each tool does, who it is for, whether it is accessible from Kenya and other African markets, pricing, and the best available tutorial. Updated weekly.
+
+## Laws & Policy Library
+
+- [AI Policy & Regulation](/policy/): Plain-language summaries of AI laws and regulations globally. Includes Kenya National AI Strategy 2025-2030, African Union Continental AI Strategy, EU AI Act, and emerging regulations across MENA and South Asia. Updated as legislation passes.
+
+## Deep Dives & Analysis
+
+- [Industry Deep Dives](/deep-dives/): Long-form analysis translating major AI developments into industry-specific implications for non-technical professionals. With data, named sources, and 90-day action plans. Examples include: What Agentic AI Means for Kenya's BPO Sector; AI Certification Pathways for Non-Technical Professionals; What Foundation Model Releases Mean for African Healthcare Workers. Available to Professional subscribers.
+
+## Podcasts
+
+- [Podcast Intelligence](/podcasts/): Curated AI podcast episodes tagged by industry and audience type. Each listing explains why the episode matters, who should listen, and what the key insight is. Includes episodes featuring Sam Altman, Jensen Huang, Dario Amodei, and other AI leaders — translated for relevance to Global South professionals.
+
+## Research & Papers
+
+- [Research Library](/research/): AI research papers and reports translated from technical to accessible language. MIT, Google DeepMind, Stanford, and African research institutions. Tagged by industry and audience type.
+
+## Mentor & Mentee Space
+
+- [Mentorship](/mentors/): AI professionals available for mentorship matched with students and career-switchers. Industry-specific, geography-aware. Available to Professional subscribers.
+
+## About & Advisory
+
+- [About](/about.html): Platform mission, methodology, and the team behind InfoOnAIResources.
+- [Institutional Advisory](/advisory/): Strategic AI intelligence retainer for African and MENA institutions — hospitals, universities, development finance institutions, government agencies. Vendor-neutral, regionally informed intelligence at accessible pricing.
+- [Contact](/contact.html): Enquiries, partnerships, sponsorships, contributor submissions.
+
+## Optional
+
+- [Privacy Policy](/privacy.html): Data protection and privacy practices. Compliant with Kenya Data Protection Act 2019 and GDPR.
+- [Terms of Service](/terms.html): Terms governing use of the platform.
