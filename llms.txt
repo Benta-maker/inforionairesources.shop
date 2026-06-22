@@ -36,6 +36,7 @@ InfoOnAIResources was founded in Nairobi, Kenya. It publishes a weekly intellige
 ## Deep Dives & Analysis
 
 - [Industry Deep Dives](/deep-dives/): Long-form analysis translating major AI developments into industry-specific implications for non-technical professionals. With data, named sources, and 90-day action plans. Examples include: What Agentic AI Means for Kenya's BPO Sector; AI Certification Pathways for Non-Technical Professionals; What Foundation Model Releases Mean for African Healthcare Workers. Available to Professional subscribers.
+  - [GLM-5.2: The First Open AI Model Good Enough for Daily Work — What It Means for the Global South](/deep-dives/glm-5-2-global-south/): How GLM-5.2, a free, open-weight model from China that rivals Claude and GPT at a tenth of the cost, can be self-hosted for genuine AI sovereignty — what it is, what it costs, who it is for, and the data-governance risks the Global South must weigh.
 
 ## Podcasts
 
