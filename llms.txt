@@ -12,6 +12,7 @@ InfoOnAIResources was founded in Nairobi, Kenya. It publishes a weekly intellige
 ## Opportunity Database
 
 - [AI Jobs](/opportunities/jobs/): Verified AI job listings globally — filtered by industry, level, and geography. Includes salary ranges, required skills, and accessibility notes for Global South applicants. Updated weekly.
+  - [Research Engineer, Domain Scaling — Anthropic](/opportunities/jobs/research-engineer-domain-scaling-anthropic/): Full-time, San Francisco and New York City (hybrid), visa sponsorship available. Build reinforcement-learning environments that make Claude world-class at real-world knowledge work in finance, healthcare, and legal. External listing — applications are handled directly on Anthropic's own site at https://job-boards.greenhouse.io/anthropic/jobs/5271380008
 - [Scholarships & Fellowships](/opportunities/scholarships/): Open AI scholarships and fellowships accessible to African, South Asian, and MENA students and professionals. Includes deadlines, eligibility requirements, funding amounts, and application guidance. Updated weekly.
 - [Courses & Certifications](/opportunities/courses/): AI certifications credited by industry — healthcare, legal, finance, education, agriculture, manufacturing. Includes pricing, duration, and accessibility from Global South markets.
 - [Grants & Accelerators](/opportunities/grants/): Equity-free grants and accelerator programs for AI startups and projects in the Global South.
