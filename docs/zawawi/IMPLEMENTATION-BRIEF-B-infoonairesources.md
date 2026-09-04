@@ -8,6 +8,12 @@
 **Deployed source:** `github.com/Benta-maker/inforionairesources.shop` @ `main` — note the repository name does not match the domain (§C.1.8)
 **Execution environment:** Claude Code, operating on a local clone
 
+> **Amended 3 September 2026.** Counts in this brief have been corrected against the repository as inspected on that date, under §0 working method clause 1 — *where the brief and the file disagree, the file is the fact*. Every correction is recorded in **`docs/zawawi/BRIEF-B-CORRECTIONS.md`** (C-1…C-13), with what the brief said, what the repository contains, and how it was counted. The corrections were accepted by Benta, convener, on 3 September 2026.
+>
+> **These are corrections, not decisions.** No task's scope, permission or prohibition is changed. The version as issued is preserved in git at commit `3626356`.
+>
+> `docs/zawawi/site-inventory-v1.md` is **not** amended — it is a dated observation record, and its internal inconsistencies are recorded in the corrections file instead.
+
 ---
 
 ## 0. INSTRUCTION HEADER — READ BEFORE ANYTHING ELSE
@@ -18,7 +24,7 @@ You are implementing decisions that have already been made. You are not deciding
 
 1. **Read.** Read the current file before editing it. This brief describes the repository as inspected on 28 August 2026. Where the brief and the file disagree, the file is the fact and you report the discrepancy.
 2. **Plan.** State what you will change, in which files, and why. One task at a time.
-3. **Confirm.** Wait for go-ahead before executing. The site is hand-authored static HTML with the full chrome duplicated into every file (§A.7.3) — a careless find-and-replace touches twelve documents at once.
+3. **Confirm.** Wait for go-ahead before executing. The site is hand-authored static HTML with the full chrome duplicated into every file (§A.7.3) — a careless find-and-replace touches thirteen documents at once.
 4. **Execute.** One task, one commit.
 
 **Commit message format — mandatory:**
@@ -51,7 +57,7 @@ ARIA added: none | <attribute> because <native element that cannot express it>
 
 This property has an unusual shape, and the shape determines the work. The inventory puts it plainly at §C.1.22: dense structured data across thirteen pages — `JobPosting`, `Course`, `FAQPage`, `BlogPosting`, `ItemList`, `BreadcrumbList` — sitting on a site whose navigation is mostly broken and whose conversion mechanisms are all placeholders.
 
-Five of the seven main-nav destinations return 404. Six of the seven footer links return 404. Eighteen of thirty-one sitemap URLs have no file behind them. The `llms.txt` describes eleven content areas of which two exist — the inventory calls it *"the most complete description of a site that does not exist."* Both subscribe forms post to `REPLACE_WITH_YOUR_ID`. The WhatsApp link is `REPLACE_WITH_WHATSAPP_NUMBER`, and it is live. The footer advertises `info@infoonairesources.shop` on a domain that publishes no MX record.
+Five of the seven main-nav destinations return 404. Six of the seven footer links return 404. Eighteen of thirty-two sitemap URLs have no file behind them. The `llms.txt` describes eleven content areas of which two exist — the inventory calls it *"the most complete description of a site that does not exist."* Both subscribe forms post to `REPLACE_WITH_YOUR_ID`. The WhatsApp link is `REPLACE_WITH_WHATSAPP_NUMBER`, and it is live. The footer advertises `info@infoonairesources.shop` on a domain that publishes no MX record.
 
 So the mission is not to add a machine layer. It is to **make the existing declarations true**, and only then to extend them.
 
@@ -95,7 +101,7 @@ Task B-2 removes those blocks. **This is a real trade and the convener should ag
 - [ ] **P-1. Which of the eighteen phantom paths are real commitments, and when?** `/brief/`, `/brief/latest`, `/tools/`, `/policy/`, `/industry/` and its five verticals, `/podcasts/`, `/research/`, `/mentors/`, `/advisory/`, `/opportunities/grants/`, `/about.html`, `/contact.html`, `/privacy.html`, `/terms.html`, `/search`. Inventory §C.2.7 asks whether the sitemap and `llms.txt` are aspirational-by-design or stale. **For each: launching within 30 days, launching later, or not launching.** Anything not launching within 30 days comes out of the sitemap, `llms.txt` and navigation now, and goes back in when it ships. *This single answer unblocks B-4, B-5, B-6 and B-7.*
 - [ ] **P-2. Formspree form ID** — the real value replacing `REPLACE_WITH_YOUR_ID`, or a decision to use a different provider, or a decision to remove the forms. Both homepage forms are non-functional (§A.4.9, §A.6.1).
 - [ ] **P-3. WhatsApp number** replacing `REPLACE_WITH_WHATSAPP_NUMBER` — or a decision to remove the link. It is live on the production site today (§C.1.1).
-- [ ] **P-4. Mail routing for `info@infoonairesources.shop`.** The domain publishes no MX record while twelve pages advertise the address in a `mailto:` and the `Organization.contactPoint.email` asserts it (§C.1.12). Either mail is configured, or the address comes off the site. There is no third option.
+- [ ] **P-4. Mail routing for `info@infoonairesources.shop`.** The domain publishes no MX record while thirteen pages advertise the address in a `mailto:` and the `Organization.contactPoint.email` asserts it (§C.1.12). Either mail is configured, or the address comes off the site. There is no third option.
 
 ### Repository and deployment (§C.2.3)
 
@@ -142,7 +148,7 @@ Task B-2 removes those blocks. **This is a real trade and the convener should ag
 | **DNC-6** | **The FAQ accordion mechanics.** Built on real `<button>` elements with `aria-expanded`/`aria-controls` maintained in the handler; zero inline event handlers; zero `tabindex`; no `role="button"` on a `<div>`. This is the pattern D-17 ratifies. | **D-17 (binding)**; §A.4.4 |
 | **DNC-7** | **The absence of testimonials and social proof.** Do not add, do not fabricate, do not markup. | §A.6.3; D-18 |
 | **DNC-8** | **All existing content.** No article, listing, page or section is deleted. Stale items are **marked**, not withdrawn. | **D-16: no content is withdrawn, none is gated** |
-| **DNC-9** | **The one-`h1`-per-page, no-skipped-levels heading structure** already present on all twelve content pages (§A.4.1). Task B-14 adds landmarks; it does not restructure headings. | D-17; §A.4.1 |
+| **DNC-9** | **The one-`h1`-per-page, no-skipped-levels heading structure** already present on all thirteen content pages (§A.4.1). Task B-13 adds landmarks; it does not restructure headings. | D-17; §A.4.1 |
 | **DNC-10** | **The proxy state.** Do not proxy this zone before 16 September. It is the control case. | D-5; §C.1.20; OD-A |
 
 ---
@@ -219,11 +225,15 @@ Note the `Sitemap:` host: **apex, not `www.`** — see B-3.
 
 **Traces to.** Inventory §C.1.7, §A.1.5, §A.3.7: every `<link rel="canonical">`, every `og:url`, every sitemap `<loc>` and the `robots.txt` Sitemap line specify the `www.` host — *"the host the server redirects away from."* P-13 level 1 (configuration hygiene). P-15 (retrievability is part of the thin common core).
 
-**Files affected.** All twelve content HTML files, `sitemap.xml`, `robots.txt`, and the JSON-LD blocks within those files.
+**Files affected.** All thirteen content HTML files, `sitemap.xml`, `robots.txt`, and the JSON-LD blocks within those files.
 
 **Change specification.** Replace every occurrence of `www.infoonairesources.shop` with `infoonairesources.shop`. This affects canonicals, `og:url`, JSON-LD `url` and `@id` values, the `WebSite.potentialAction.target`, and every sitemap `<loc>`.
 
-Do this as a single mechanical pass, then **read every changed file** to confirm nothing else moved. The site chrome is duplicated across twelve files (§A.7.3), so a global replace is correct here — but verify it.
+Do this as a single mechanical pass, then **read every changed file** to confirm nothing else moved. The site chrome is duplicated across thirteen files (§A.7.3), so a global replace is correct here — but verify it.
+
+> **Verified fact, 3 September 2026 (BRIEF-B-CORRECTIONS C-7).** `https://www.infoonairesources.shop/` returns **HTTP 301** to the apex host. Inventory §A.1.5 graded this status code NOT DETERMINABLE. This does not change the task; it removes the doubt about why it matters — the property declares a canonical host from which the server permanently redirects away.
+>
+> **Method note, 3 September 2026.** This machine has `core.autocrlf=true`: the HTML files, `robots.txt` and `sitemap.xml` are **CRLF in the working tree, LF in the repository**. The mechanical pass must preserve working-tree line endings, or acceptance criterion "confirm nothing else moved" cannot be satisfied — every line of every file would show as changed. Git configuration is not to be altered.
 
 **Acceptance criteria.**
 1. `grep -rc 'www\.infoonairesources\.shop' .` returns 0 across the entire repository.
@@ -237,14 +247,14 @@ Do this as a single mechanical pass, then **read every changed file** to confirm
 
 **Objective.** A sitemap that lists only URLs that exist.
 
-**Traces to.** Inventory §C.1.2, §A.2.4: thirty-one URLs declared, thirteen exist, **eighteen do not**; four confirmed 404 by direct fetch. D-9: author every machine-facing signal or emit none. P-13 level 1. P-14 (admissibility: the machine layer is a projection of the human page).
+**Traces to.** Inventory §C.1.2, §A.2.4: thirty-two URLs declared, thirteen HTML pages exist, **eighteen do not**, and one entry (`/llms.txt`) is a non-HTML resource; four confirmed 404 by direct fetch. D-9: author every machine-facing signal or emit none. P-13 level 1. P-14 (admissibility: the machine layer is a projection of the human page).
 
 **Depends on.** P-1.
 
 **Files affected.** `sitemap.xml`.
 
 **Change specification.**
-- One `<url>` entry per file that exists in the repository and serves HTML. Currently that is thirteen — twelve content pages plus the Search Console verification file, and **the verification file should be excluded** (54 bytes, no `<title>`, no `<h1>`, §A.5.6).
+- One `<url>` entry per file that exists in the repository and serves HTML. Currently that is fourteen — thirteen content pages plus the Search Console verification file, and **the verification file should be excluded** (54 bytes, no `<title>`, no `<h1>`, §A.5.6).
 - **Remove the `llms.txt` entry** — a non-HTML resource listed as a crawlable page (§A.2.4).
 - Remove all eighteen phantom entries. When a page ships, it is added back in the same commit that ships it.
 - `<lastmod>`: use the real git commit date of each file. Do not carry forward `2026-03-21` values that no longer describe anything.
@@ -288,20 +298,22 @@ Do this as a single mechanical pass, then **read every changed file** to confirm
 
 **Objective.** Stop sending every visitor and every crawler into 404s.
 
-**Traces to.** Inventory §A.5.3: *"The homepage's primary navigation offers seven destinations; five of the seven resolve to 404. The homepage's nine-tile 'Content categories' nav offers nine destinations; five of nine 404. The homepage footer nav offers seven; six of seven 404."* §C.1.6: six distinct nav variants across twelve pages, *"every variant contains at least one 404 destination; `/about.html` appears in all six."* P-13 level 1. P-15 (retrievability).
+**Traces to.** Inventory §A.5.3: *"The homepage's primary navigation offers seven destinations; five of the seven resolve to 404. The homepage's nine-tile 'Content categories' nav offers nine destinations; five of nine 404. The homepage footer nav offers seven; six of seven 404."* §C.1.6: six distinct nav variants across thirteen pages, *"every variant contains at least one 404 destination; `/about.html` appears in all six."* P-13 level 1. P-15 (retrievability).
+
+> **Verified fact, 3 September 2026 (BRIEF-B-CORRECTIONS C-3).** The seven-link **footer navigation exists only on `index.html`**. The footers of the other twelve content pages carry the `mailto:info@infoonairesources.shop` address and no navigation links. So specification item 3 below is a single-file edit, while items 1–2 are a thirteen-file edit. Do not expect to find a footer nav to repair on the other twelve.
 
 **Depends on.** P-1, and P-6 if pages are being ported.
 
-**Files affected.** All twelve content HTML files.
+**Files affected.** All thirteen content HTML files.
 
 **Change specification.**
 1. Define **one** canonical navigation link set, containing only destinations that return 200 after B-7 lands.
-2. Apply it identically to all twelve files. The current six-variant divergence is an artifact of hand-copying chrome (§A.7.3) and has no design intent behind it.
+2. Apply it identically to all thirteen files. The current six-variant divergence is an artifact of hand-copying chrome (§A.7.3) and has no design intent behind it.
 3. Same for the footer nav and the nine-tile category nav on the homepage: remove tiles whose destination does not exist. **Do not stub them with placeholder pages** — that trades a 404 for a thin page, which is worse.
 4. Preserve the breadcrumb `<nav>` elements and their `aria-label`s (§A.4.2). They are correct.
 
 **Acceptance criteria.**
-1. The set of primary-nav `href` values is byte-identical across all twelve files.
+1. The set of primary-nav `href` values is byte-identical across all thirteen files.
 2. Every `href` in every nav resolves to a file in the repository, or to an in-page anchor whose `id` exists on that page.
 3. Zero occurrences of `/tools/`, `/brief/`, `/industry/`, `/policy/`, `/podcasts/`, `/research/`, `/mentors/`, `/advisory/` in any nav, unless that path now has a file.
 4. Every `<nav>` retains a distinct `aria-label`.
@@ -345,7 +357,7 @@ Either route: the `404.html` from the second repository should be ported regardl
 **Change specification.**
 1. Replace both `REPLACE_WITH_YOUR_ID` values with the real Formspree endpoint (P-2). Add a `_next` redirect to a thank-you state and a honeypot field. Add an `aria-live` region for success and error messaging — the forms currently have none (§A.4.9).
 2. WhatsApp (P-3): insert the real number, **or remove the link entirely**. Do not leave a placeholder in production for one more day.
-3. Email (P-4): either MX records are published for the domain, or `info@infoonairesources.shop` is removed from the footer of all twelve pages **and** from `Organization.contactPoint.email`. An advertised address that cannot receive mail is a broken promise in the one place a machine will most reliably extract and repeat it.
+3. Email (P-4): either MX records are published for the domain, or `info@infoonairesources.shop` is removed from the footer of all thirteen pages **and** from `Organization.contactPoint.email`. An advertised address that cannot receive mail is a broken promise in the one place a machine will most reliably extract and repeat it.
 4. Preserve the existing correct labelling: explicit `<label for>`, `required`, `aria-required` (§A.4.9). Do not regress it.
 
 **Acceptance criteria.**
@@ -367,7 +379,7 @@ Either route: the `404.html` from the second repository should be ported regardl
 
 **Why this exists.** Inventory §C.1.4 is the proof. The homepage carries six marked-up FAQ questions and renders five, and *"three marked-up questions and their answers appear nowhere on the page; three rendered questions appear nowhere in the markup."* Nobody edited the markup incorrectly. The page changed and the markup did not, because nothing connected them. A generator connects them, and that divergence becomes impossible rather than merely detectable.
 
-**Files affected.** New: `tools/generate-machine-layer.py`, `data/declared-values.json`, `tools/verify-jsonld-verbatim.py`. Then, on each run, the JSON-LD blocks inside the twelve content HTML files.
+**Files affected.** New: `tools/generate-machine-layer.py`, `data/declared-values.json`, `tools/verify-jsonld-verbatim.py`. Then, on each run, the JSON-LD blocks inside the thirteen content HTML files.
 
 **Change specification.**
 
@@ -391,7 +403,7 @@ Either route: the `404.html` from the second repository should be ported regardl
 **Operating discipline.** After this task, **no JSON-LD block is edited by hand on this property, ever.** To change what the markup says, change what the page says and re-run the generator. If a needed fact cannot be produced that way, that is a signal the page should state it — which is exactly the outcome P-14 is designed to force.
 
 **Acceptance criteria.**
-1. `python tools/generate-machine-layer.py` runs clean across all twelve pages.
+1. `python tools/generate-machine-layer.py` runs clean across all thirteen pages.
 2. Idempotence: running it twice produces zero diff on the second run.
 3. `python tools/verify-jsonld-verbatim.py` exits 0.
 4. **Drift test:** change one FAQ answer's rendered text, re-run the generator, and confirm the corresponding `Answer.text` changed to match. Then revert both. Record the test output in the commit body — this is the evidence that P-14's propagation requirement is met rather than substituted for.
@@ -418,6 +430,10 @@ Do not hand-write the corrected array. If the generator produces something wrong
 The three orphaned marked-up answers (on AI jobs in Africa, AI tools for healthcare professionals, AI regulation in Africa) are 471–591 characters each of real content. **Do not delete them from the repository.** Move them to `docs/orphaned-faq-content.md` with a note that they may be rendered on the page in a future edit, at which point they return to the markup. D-16: no content is withdrawn.
 
 Apply the same reconciliation to the `FAQPage` on `/deep-dives/glm-5-2-global-south/` — verify it matches its rendered six-question FAQ before assuming it does.
+
+> **Verified fact, 3 September 2026 (BRIEF-B-CORRECTIONS C-8).** It matches. All six marked-up `Question.name` strings on `/deep-dives/glm-5-2-global-south/index.html` correspond to the six rendered `<h3>` question headings. **The six-versus-five divergence is homepage-only.**
+>
+> **Scope of that check: question strings only.** The `acceptedAnswer.text` bodies have not been compared verbatim against the rendered answer text, and nothing here asserts that they match. That comparison remains the job of `tools/verify-jsonld-verbatim.py`, and acceptance criteria 1 and 3 below still bind on both pages.
 
 **Acceptance criteria.**
 1. For every `mainEntity` entry, both the question string and the answer string appear verbatim in the rendered text of the same page.
@@ -460,14 +476,14 @@ Fix the two markup defects the inventory notes while you are in these files, bot
 
 **Depends on.** P-16 for the image assets; B-7 for `/about.html`.
 
-**Files affected.** All twelve content HTML files.
+**Files affected.** All thirteen content HTML files.
 
 **Change specification.**
 1. **Images (P-16):** if the assets exist, commit them to `assets/` and leave the references. If they do not, **remove `og:image`, `twitter:image`, `BlogPosting.image` and `Organization.logo` entirely.** A reference to a missing image is worse than no reference: it produces a broken card everywhere the site is shared, and `Organization.logo` failing invalidates the node for several consumers.
-2. **`twitter:` tags** are present on only 4 of 12 pages (§A.3.6). Either add them to all twelve or remove them from the four. Consistency matters more than presence, and **no `twitter:card` may exist without a valid image** — so if P-16 comes back empty, remove all four sets.
+2. **`twitter:` tags** are present on only 4 of 13 pages (§A.3.6). Either add them to all thirteen or remove them from the four. Consistency matters more than presence, and **no `twitter:card` may exist without a valid image** — so if P-16 comes back empty, remove all four sets.
 3. **`WebSite.potentialAction`:** remove the `SearchAction` entirely. No `/search` endpoint exists and none is being built.
 4. **`Person.url`:** resolves after B-7, or the property is removed. Note the node is typed `Person` but named "InfoOnAIResources Editorial Team" (§A.3.5) — a team is not a `Person`. Retype to `Organization`, or supply a named individual (P-13). Do not invent one.
-5. **`favicon.ico`:** commit one or remove the `<link rel="icon">`.
+5. **`favicon.ico`:** commit one or remove the `<link rel="icon">`. **Verified fact, 3 September 2026 (BRIEF-B-CORRECTIONS C-4):** `<link rel="icon" href="/favicon.ico">` is present on **all thirteen** content pages and `favicon.ico` does not exist in the repository. The reference is therefore broken thirteen times, and the removal branch of this item is a thirteen-file edit, not a one-file edit.
 6. **`Organization` node:** if P-13 supplies legal entity details, add `legalName` and `address` as a `PostalAddress`. The footer states "Nairobi, Kenya" as text but no address is expressed in markup (§A.3.2). Only add what the page states — if the page does not carry a street address, do not put one in markup. P-14 binds.
 7. **`WebPage.dateModified`** is `2026-03-21`, three months older than the last content commit (§A.3.2). Set it to the real last-modified date, or remove it.
 
@@ -479,7 +495,7 @@ The URL half of the verification is the part that stays a checker rather than be
 1. Every URL in any JSON-LD node, `og:` tag, `twitter:` tag or `<link>` resolves to a repository file or returns 200 externally. Zero exceptions.
 2. `tools/verify-jsonld-verbatim.py` runs clean and is documented in the repository README.
 3. No `SearchAction` remains.
-4. `twitter:` tag presence is all-twelve or zero.
+4. `twitter:` tag presence is all-thirteen or zero.
 5. No node typed `Person` carries a collective name.
 
 ---
@@ -517,9 +533,9 @@ The URL half of the verification is the part that stays a checker rather than be
 
 **Objective.** Give the pages the structural landmarks they lack.
 
-**Traces to.** **D-17, RATIFIED and binding:** semantic HTML first; ARIA only where a native element cannot express the semantics; every ARIA addition justified in the change log. Inventory §A.4.2: **no `<main>` element exists on any page of this property** — zero occurrences across all thirteen HTML files. `<header>` is absent on the homepage. §A.7.6 notes, pointedly, that the *undeployed* second repository has `<main>` on four pages while the deployed property has none.
+**Traces to.** **D-17, RATIFIED and binding:** semantic HTML first; ARIA only where a native element cannot express the semantics; every ARIA addition justified in the change log. Inventory §A.4.2: **no `<main>` element exists on any page of this property** — zero occurrences across all fourteen HTML files. `<header>` is absent on the homepage. §A.7.6 notes, pointedly, that the *undeployed* second repository has `<main>` on four pages while the deployed property has none.
 
-**Files affected.** All twelve content HTML files.
+**Files affected.** All thirteen content HTML files. The fourteenth `.html` file is the 54-byte Search Console verification file; it gets no `<main>` and no skip link.
 
 **Change specification.**
 1. Add exactly one `<main>` per page, wrapping the primary content between the nav and the footer.
@@ -532,8 +548,8 @@ The URL half of the verification is the part that stays a checker rather than be
 **Barred.** No keyboard or zoom specification derived from D-4's held magnitudes.
 
 **Acceptance criteria.**
-1. Exactly one `<main>` per content page; twelve total.
-2. Skip link present on all twelve, focusable, targets `main`.
+1. Exactly one `<main>` per content page; thirteen total.
+2. Skip link present on all thirteen, focusable, targets `main`.
 3. Count of ARIA attributes after ≤ count before.
 4. Visual regression at 390 / 768 / 1440px: zero pixel change except the focused skip link.
 5. A `prefers-reduced-motion: reduce` block exists and disables the transitions.
@@ -545,17 +561,17 @@ The URL half of the verification is the part that stays a checker rather than be
 
 **Objective.** Ensure a rendering agent sees what a retrieval agent sees.
 
-**Traces to.** Inventory §A.4.6: twenty `.reveal` elements render at **opacity 0** until an `IntersectionObserver` fires — *"invisible in a screenshot — while their text is fully present in the HTML source"*; the FAQ's five answer bodies are in the DOM but visually collapsed, so *"a retrieval agent reading the DOM gets all five answers; a vision agent working from a rendered screenshot gets five question strings and no answers"*; and the copyright year is JS-generated, so the live footer serves with **no year at all** (§C.1.1). Charter II.4, the dual-eyes finding. D-4 severed and ruled component: *"anything a machine must read is real text; the early portion of a page carries the substantive claim."* P-16: *"no fact layer gated behind JavaScript."*
+**Traces to.** Inventory §A.4.6: nineteen `.reveal` elements render at **opacity 0** until an `IntersectionObserver` fires — *"invisible in a screenshot — while their text is fully present in the HTML source"*; the FAQ's five answer bodies are in the DOM but visually collapsed, so *"a retrieval agent reading the DOM gets all five answers; a vision agent working from a rendered screenshot gets five question strings and no answers"*; and the copyright year is JS-generated, so the live footer serves with **no year at all** (§C.1.1). Charter II.4, the dual-eyes finding. D-4 severed and ruled component: *"anything a machine must read is real text; the early portion of a page carries the substantive claim."* P-16: *"no fact layer gated behind JavaScript."*
 
-**Files affected.** `index.html` — the inline `<style>` and the 1,391-character inline `<script>`. The other eleven pages have no script and no `.reveal` usage (§A.4.6); do not touch them.
+**Files affected.** `index.html` — the inline `<style>` and the 1,391-character inline `<script>`. The other twelve pages have no script and no `.reveal` usage (§A.4.6); do not touch them.
 
 **Change specification.**
-1. **Invert the `.reveal` default.** Declare `.reveal { opacity: 1; transform: none; }` as the base state. Have the script add a class to `<html>` on execution — e.g. `js-enabled` — and scope the hidden-then-animate rule to `.js-enabled .reveal:not(.visible)`. Net effect: with JavaScript, the animation is unchanged; without it, all twenty blocks are visible. **The animation as a human sees it must not change.**
+1. **Invert the `.reveal` default.** Declare `.reveal { opacity: 1; transform: none; }` as the base state. Have the script add a class to `<html>` on execution — e.g. `js-enabled` — and scope the hidden-then-animate rule to `.js-enabled .reveal:not(.visible)`. Net effect: with JavaScript, the animation is unchanged; without it, all nineteen blocks are visible. **The animation as a human sees it must not change.**
 2. **Copyright year:** replace the JS assignment with the literal year in the HTML. Keep the `id` if the script still uses it, or remove both.
 3. **The FAQ accordion stays as it is.** DNC-6 protects it; the pattern is what D-17 ratifies; and the answers are in the DOM, which is what P-16's non-obstruction requirement asks for. A collapsed-by-default accordion is a legitimate human-facing design choice.
 
 **Acceptance criteria.**
-1. With JavaScript disabled, all twenty `.reveal` elements compute to `opacity: 1`.
+1. With JavaScript disabled, all nineteen `.reveal` elements compute to `opacity: 1`.
 2. With JavaScript enabled, the reveal animation is visually identical to before — verify by recording both.
 3. The served footer contains a literal four-digit year with no script execution.
 4. Visual regression with JS enabled: zero pixel change.
@@ -566,7 +582,7 @@ The URL half of the verification is the part that stays a checker rather than be
 
 **Objective.** Every claim on the page attributable.
 
-**Traces to.** Inventory §A.5.6: four homepage statistics carry named sources; two do not — "198M internet-connected knowledge workers" and "54% … only 4% are acting". D-3 (highest-quality source for its own description). **P-20's test: would the statement be true and attributable if a human read it?** Charter Part VI: date-stamp everything; state what is being counted.
+**Traces to.** Inventory §A.5.6. **Corrected 3 September 2026 (BRIEF-B-CORRECTIONS C-5):** the homepage stat block carries **four** statistics. **Two** carry named sources ("Microsoft AI Diffusion Report, 2026"; "PwC, analysing 1 billion job ads, 2025"). **Two** do not — "198M internet-connected knowledge workers" and "54% … only 4% are acting" — and on those two the `stat-source` slot is occupied by descriptive copy rather than left empty: "Africa, South Asia & MENA combined" and "The gap this platform exists to close". The scope is two of four, not two of six, and the work is a replacement in an occupied slot, not the addition of a missing element. D-3 (highest-quality source for its own description). **P-20's test: would the statement be true and attributable if a human read it?** Charter Part VI: date-stamp everything; state what is being counted.
 
 **Depends on.** P-14.
 
@@ -636,7 +652,7 @@ Per D-16, evergreen material on this property — the GLM-5.2 deep dive in parti
 - `grep -rc 'REPLACE_WITH\|TODO\|FIXME\|lorem' .` → 0.
 - `grep -rc 'www\.infoonairesources\.shop' .` → 0.
 - Link check: every `href`, `src`, `<loc>`, and JSON-LD URL resolves.
-- Nav consistency: the primary-nav href set is identical across all twelve files.
+- Nav consistency: the primary-nav href set is identical across all thirteen files.
 - Visual regression at 390 / 768 / 1440px.
 - Accessibility scan: no new violations; ARIA count not increased.
 - Expiry check: no index label says "Open" for a date in the past.
