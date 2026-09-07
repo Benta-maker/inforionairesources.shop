@@ -35,13 +35,21 @@ A change is **machine-facing** if it touches any of:
 
 | Date | Task ID | File | What changed | Ruling ID | Who decided |
 |---|---|---|---|---|---|
-| — | — | — | *No machine-facing change has landed yet.* | — | — |
+| 2026-09-07 | B-2 | `robots.txt` | Whole file replaced. **Removed** the nine `Disallow: /` blocks on named training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot, Bytespider, meta-externalagent, omgili, omgilibot, FacebookBot) and the twenty-one per-crawler `Allow` stanzas, leaving one `User-agent: *` / `Allow: /`. **Added** an authored comment block carrying the decision, its date and its rulings, and a rights reservation stated as claim-preserving and expressly not enforceable. `Sitemap:` host changed from `www.infoonairesources.shop` to the apex, ahead of B-3. **What this forfeits:** the property no longer makes any refusal of training use at the door — the stated position "not available for training" is withdrawn as a directive and survives only as a non-enforcing reservation. **Why it was forfeited:** under most-restrictive-wins the nine blocks also blocked Googlebot, Applebot and Bingbot, so the refusal was never obtained and search visibility was paid for it. **Outstanding:** D-9's second limb — the human-readable equivalent on the same property — is **not** discharged; see the debt note below. | D-1 (CONCEDE, final); P-8; D-9 (first limb only); OD-L resolved 2026-09-02 | **Benta**, convener. OD-L decided 2 September 2026; executed 7 September 2026. |
 
-**Why this table is empty.** A-13 requires entries appended at execution time and forbids retrofitting. As of the commit that opens this file, no machine-facing change has been made to the property.
+## Open debt carried by an entry above
 
-The two commits that precede it — `3626356` (DOC-0) and `c5d141e` (DOC-1) — touch only files under `docs/`. Neither alters `robots.txt`, `sitemap.xml`, `llms.txt`, any JSON-LD block or any `<meta>` tag. They are therefore **not** machine-facing changes and are deliberately **not** backfilled here. They are recorded where they belong: in git, and in `docs/zawawi/BRIEF-B-CORRECTIONS.md`.
+**B-2 leaves one limb of D-9 undischarged, and B-7 discharges it.**
 
-**The first entry will be B-2** — the `robots.txt` rewrite. Per Execution Sequence item 0.5, that entry must record the convener's decision on OD-L and its date (2 September 2026), not merely the file change, and must name what the removal forfeits.
+D-9 requires every machine-facing signal to be authored *and* the human-readable equivalent published on the same property. B-2 authors the signal. It does not publish the equivalent: the brief's specified comment block ended with `Human-readable equivalent: /terms.html`, and `/terms.html` returns 404 on this property. Shipping a pointer to a page that does not exist would assert a fact the site does not carry, which P-14 forbids, so the convener ruled the line dropped rather than shipped broken.
+
+**Owner: B-7** — "Restore or de-reference the missing standard pages". When B-7 ships `/terms.html` returning 200, the `Human-readable equivalent: /terms.html` line is restored to `robots.txt` in the same commit, and that commit appends its own entry here closing this debt. Until then the reservation in `robots.txt` stands without a human-readable counterpart, and this is a known gap, not an oversight.
+
+---
+
+## What is deliberately not logged
+
+A-13 requires entries appended at execution time and forbids retrofitting, so nothing here is backfilled. In particular, the two commits that opened this programme — `3626356` (DOC-0) and `c5d141e` (DOC-1) — touch only files under `docs/`. Neither alters `robots.txt`, `sitemap.xml`, `llms.txt`, any JSON-LD block or any `<meta>` tag. They are therefore **not** machine-facing changes and are deliberately **not** backfilled here. They are recorded where they belong: in git, and in `docs/zawawi/BRIEF-B-CORRECTIONS.md`.
 
 Entries for B-3 through B-12 follow as those tasks land.
 
