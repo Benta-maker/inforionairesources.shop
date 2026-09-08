@@ -236,7 +236,7 @@ Do this as a single mechanical pass, then **read every changed file** to confirm
 > **Method note, 3 September 2026.** This machine has `core.autocrlf=true`: the HTML files, `robots.txt` and `sitemap.xml` are **CRLF in the working tree, LF in the repository**. The mechanical pass must preserve working-tree line endings, or acceptance criterion "confirm nothing else moved" cannot be satisfied — every line of every file would show as changed. Git configuration is not to be altered.
 
 **Acceptance criteria.**
-1. `grep -rc 'www\.infoonairesources\.shop' .` returns 0 across the entire repository.
+1. `grep -rl 'www\.infoonairesources\.shop' . --exclude-dir=.git --exclude-dir=docs` returns nothing — that is, zero occurrences across **the served property**: the thirteen content HTML files, `sitemap.xml` and `robots.txt`. **Corrected 8 September 2026 (BRIEF-B-CORRECTIONS C-14).** As issued this criterion said "0 across the entire repository", which was written on 2 September, one day before the programme documents entered the repository in `3626356`. Four documents under `docs/` quote the `www.` host in order to record the defect, B-2's change and the 301; rewriting them would make the record lie about its own history. Documents are records, not served artifacts, and are excluded by design.
 2. Every page's canonical is self-referential, absolute, and on the apex host.
 3. Each `@id` value that was previously referenced by another node still resolves within its graph — no dangling `@id` references introduced.
 4. Live check after deploy: fetching any page returns a canonical matching its own final URL.

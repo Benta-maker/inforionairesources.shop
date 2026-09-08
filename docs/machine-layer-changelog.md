@@ -36,6 +36,7 @@ A change is **machine-facing** if it touches any of:
 | Date | Task ID | File | What changed | Ruling ID | Who decided |
 |---|---|---|---|---|---|
 | 2026-09-07 | B-2 | `robots.txt` | Whole file replaced. **Removed** the nine `Disallow: /` blocks on named training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot, Bytespider, meta-externalagent, omgili, omgilibot, FacebookBot) and the twenty-one per-crawler `Allow` stanzas, leaving one `User-agent: *` / `Allow: /`. **Added** an authored comment block carrying the decision, its date and its rulings, and a rights reservation stated as claim-preserving and expressly not enforceable. `Sitemap:` host changed from `www.infoonairesources.shop` to the apex, ahead of B-3. **What this forfeits:** the property no longer makes any refusal of training use at the door — the stated position "not available for training" is withdrawn as a directive and survives only as a non-enforcing reservation. **Why it was forfeited:** under most-restrictive-wins the nine blocks also blocked Googlebot, Applebot and Bingbot, so the refusal was never obtained and search visibility was paid for it. **Outstanding:** D-9's second limb — the human-readable equivalent on the same property — is **not** discharged; see the debt note below. | D-1 (CONCEDE, final); P-8; D-9 (first limb only); OD-L resolved 2026-09-02 | **Benta**, convener. OD-L decided 2 September 2026; executed 7 September 2026. |
+| 2026-09-08 | B-3 | 13 content HTML files, `sitemap.xml` | Canonical host corrected across the served property. **140 occurrences** of `https://www.infoonairesources.shop` replaced with `https://infoonairesources.shop` — 108 in HTML (30 `og:`/`twitter:` `content=`, 28 JSON-LD `"item"`, 18 `"url"`, 16 `"@id"`, 13 `rel="canonical"` `href=`, and one each of `"target"`, `"logo"`, `"image"`) and 32 `<loc>` in `sitemap.xml`. The property had declared a canonical host the server redirects away from (301, verified 3 September, C-7). `robots.txt` was **not** touched: B-2 had already moved its `Sitemap:` line to the apex, so it held zero occurrences. **Verified:** every canonical is now self-referential and on the apex; no `@id` reference was orphaned; no occurrence lay in visible page text, so nothing a human reads changed. **Surfaced but not fixed:** one pre-existing dangling `@id` — see the debt note below. | P-13 level 1 (configuration hygiene); P-15 (retrievability); §C.1.7, §A.1.5, §A.3.7; C-14 (acceptance criterion 1 rescoped) | **Benta**, convener. C-14 approved 8 September 2026. |
 
 ## Open debt carried by an entry above
 
@@ -44,6 +45,16 @@ A change is **machine-facing** if it touches any of:
 D-9 requires every machine-facing signal to be authored *and* the human-readable equivalent published on the same property. B-2 authors the signal. It does not publish the equivalent: the brief's specified comment block ended with `Human-readable equivalent: /terms.html`, and `/terms.html` returns 404 on this property. Shipping a pointer to a page that does not exist would assert a fact the site does not carry, which P-14 forbids, so the convener ruled the line dropped rather than shipped broken.
 
 **Owner: B-7** — "Restore or de-reference the missing standard pages". When B-7 ships `/terms.html` returning 200, the `Human-readable equivalent: /terms.html` line is restored to `robots.txt` in the same commit, and that commit appends its own entry here closing this debt. Until then the reservation in `robots.txt` stands without a human-readable counterpart, and this is a known gap, not an oversight.
+
+---
+
+**B-3 surfaced one pre-existing dangling `@id`, and B-11 discharges it.**
+
+`https://infoonairesources.shop/deep-dives/glm-5-2-global-south/` is referenced as a bare `{"@id": …}` by another node but is never defined as a node with that `@id`. It resolves to nothing inside its graph.
+
+**B-3 did not introduce this.** It was verified present on `main` before the pass, in the `www.` form, so B-3 changed the reference's host and nothing else. B-3's acceptance criterion 3 forbids *introducing* a dangling reference; it does not ask this task to repair one it inherited, and repairing it would mean authoring a node by hand — which is the failure mode B-20 exists to remove.
+
+**Owner: B-11** — "Repair every dangling reference in the machine layer", whose scope is exactly this, and which by OD-J is executed by the generator rather than by hand. Recorded here so the finding is not lost between the task that found it and the task that fixes it.
 
 ---
 

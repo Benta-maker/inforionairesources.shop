@@ -228,6 +228,42 @@ Git configuration is not to be changed. The constraint sits on the editing metho
 
 ---
 
+## C-14 — B-3's acceptance criterion 1 cannot be met as written, and meeting it would falsify the record
+
+**Date:** 8 September 2026
+**Accepted by:** Benta, convener, the same day
+
+**What the brief says.** B-3, acceptance criterion 1: *"`grep -rc 'www\.infoonairesources\.shop' .` returns 0 across the entire repository."*
+
+**Why it cannot be met.** Twelve occurrences of the string live in four documents whose purpose is to record history:
+
+| File | Occurrences | What they are |
+|---|---|---|
+| `docs/zawawi/site-inventory-v1.md` | 8 | the 28 August 2026 findings baseline, describing the defect |
+| `docs/zawawi/IMPLEMENTATION-BRIEF-B-infoonairesources.md` | 2 | B-3's own specification, quoting the string it instructs be removed |
+| `docs/machine-layer-changelog.md` | 1 | B-2's entry, recording the host it moved the `Sitemap:` line *from* |
+| `docs/zawawi/BRIEF-B-CORRECTIONS.md` | 1 | C-7, recording the `www` → apex 301 |
+
+Rewriting those twelve would make the inventory describe a defect it did not find, and make the changelog say B-2 changed the host from the host it changed it *to*. **A documentary record of a defect must be allowed to quote the defect.** A criterion that forces a document to lie about history is a defective criterion, not a standard to meet.
+
+**Why the criterion is defective rather than the documents wrong.** Brief B was issued **2 September 2026**. The programme documents entered the repository in commit `3626356` (DOC-0) on **3 September 2026**. **The criterion predates DOC-0 by one day.** When it was written, `docs/` held nothing, and "across the entire repository" meant the served property and nothing else. It has not become wrong; the repository has grown a second kind of content that the criterion was never drafted against.
+
+**Corrected criterion, as amended in the brief:**
+
+```bash
+grep -rl 'www\.infoonairesources\.shop' . --exclude-dir=.git --exclude-dir=docs
+```
+
+returns nothing. The scope is **the served property** — the thirteen content HTML files, `sitemap.xml` and `robots.txt`. Documents under `docs/` are records, not served artifacts, and are excluded by design rather than by oversight.
+
+**What did not change.** All 140 in-scope occurrences were replaced. The correction narrows what is *checked*, not what is *done*.
+
+**How counted.** `git grep -l` across the working tree with and without the `docs` exclusion, cross-checked per file.
+
+**Brief amended.** Yes — B-3 acceptance criterion 1.
+
+---
+
 ## What is NOT corrected here
 
 The PRE-TASK checklist items P-1 through P-20 remain **unanswered**. Nothing in this file answers any of them, and no task blocked on them is unblocked by anything recorded here.
