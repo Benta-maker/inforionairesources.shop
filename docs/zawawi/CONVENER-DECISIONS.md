@@ -91,9 +91,11 @@ Cross-reference: `../../zawawi-observation/observation/README.md`, "Known gap in
 
 **Affected runs:** both passes of **8 September 2026** — 224 records, every `control-browser` row carrying `"control_ua_is_placeholder": true`.
 
-**Date corrected: _not yet corrected as of 8 September 2026._**
+**Date corrected: 8 September 2026.** `Chrome/140.0.0.0` (placeholder) → `Chrome/152.0.0.0`, supplied by the convener, and `CONTROL_UA_IS_PLACEHOLDER` set to `False`. Verified byte-identical to the string supplied, and the two-line diff verified before commit.
 
-Verified directly rather than taken as reported: `observe.py` still reads `CONTROL_UA_IS_PLACEHOLDER = True`, and the string is still `Chrome/140.0.0.0`, a version this programme has not confirmed exists. **Fill in the date on the line above when it is actually changed, and name the first run that used the real string.** Until then, the control arm of the series is measuring a browser that may not exist, and every comparison drawn against it inherits that.
+**First run using the real string: the run of 9 September 2026** — the first scheduled run after the change. **No run on 8 September used it.** All three passes of 8 September, 336 records, carry `"control_ua_is_placeholder": true` and were sent with the placeholder.
+
+**So the boundary between the two states falls inside the series, not before it.** Any comparison that spans 8 September is comparing control-browser rows sent with two different user-agent strings, and the `control_ua_is_placeholder` field on each record is what separates them. The thirteen declared-agent rows are unaffected — their tokens never changed.
 
 ---
 
