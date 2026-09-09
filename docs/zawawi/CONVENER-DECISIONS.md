@@ -97,6 +97,29 @@ Cross-reference: `../../zawawi-observation/observation/README.md`, "Known gap in
 
 **So the boundary between the two states falls inside the series, not before it.** Any comparison that spans 8 September is comparing control-browser rows sent with two different user-agent strings, and the `control_ua_is_placeholder` field on each record is what separates them. The thirteen declared-agent rows are unaffected — their tokens never changed.
 
+### e. A failed scheduled run leaves only a missing file as evidence
+
+**Confirm each day's run the same day, until 20 September.**
+
+On **9 September 2026** the 08:00 scheduled run **failed and produced zero records**. It was registered with `-Execute "python"`, which resolves in a shell only through a Windows Store app-execution alias on the *user* PATH; the *machine* PATH has no Python entry, and the alias does not resolve under Task Scheduler. The task returned `0x80070002`, file not found, before `observe.py` was ever reached. The defect was in the runbook command, not the machine.
+
+**The failure was invisible.** It wrote nothing, warned nobody, and left its exit code in Task Scheduler where no one looks. The only symptom was a file that did not exist. It was caught because the convener asked for the run to be confirmed — not by any alarm.
+
+`check.py` criterion 1 would have caught the missing file, **but not until the following day**. Between now and 15 September that is a day too late, and a day lost before the boundary cannot be recovered by any later work.
+
+**The rule:** each day, check that `LastTaskResult` is `0` and that the day's `.jsonl` holds **112 records** — 224 on the twice-daily days, 13–18 September. Procedure in `../../zawawi-observation/RUNBOOK.md` §1.
+
+`StartWhenAvailable`, set on 8 September, did work: it re-fired the missed 08:00 slot at 09:29. The setting did its job; the command it launched was broken. **Note also that a Python reinstall or upgrade changes the interpreter path and breaks the task the same silent way.**
+
+**Second timing irregularity in the series.** 9 September's 112 records were captured **07:38–07:42 UTC from the manually triggered fixed run**, not at the 08:00 local slot. Together with 8 September's control-UA split at 2(d), the series now carries two irregularities in its first two days, both inside the before-state window:
+
+| Date | Irregularity |
+|---|---|
+| 8 Sep | Control-browser rows sent with the **placeholder** UA. Three passes, 336 records, all flagged `control_ua_is_placeholder: true`. |
+| 9 Sep | Records captured from a **re-triggered** run after the 08:00 slot failed, not at the scheduled time. First run using the real UA. |
+
+Neither invalidates the series. Both must be stated in any finding drawn from it, because a reader comparing capture times or control-arm rows across 8–9 September is comparing across a change in the instrument itself.
+
 ---
 
 ## SECTION 3 — PENDING ANSWERS
