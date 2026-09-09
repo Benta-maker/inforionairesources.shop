@@ -122,55 +122,84 @@ Neither invalidates the series. Both must be stated in any finding drawn from it
 
 ---
 
-## SECTION 3 — PENDING ANSWERS
+## SECTION 3 — PRE-TASK ITEMS, ANSWERED
 
-**All twenty PRE-TASK items P-1 to P-20 are unanswered as of 8 September 2026.**
+**All twenty items P-1 to P-20 stood open from the brief's issue on 2 September until 8–9 September 2026, when the convener answered every one.** They are recorded here with the answer as given, and with the effect on the tasks each was blocking.
 
-This is the programme's bottleneck. It is recorded here so that a future session sees it immediately rather than reconstructing it from the brief.
+Where an answer creates a new missing input, or changes what a task does rather than merely unblocking it, that is stated in the row. Those are consequences of the answers, not challenges to them.
 
-Dependencies below are taken from the brief's own **"Depends on"** lines, not inferred, except where the row says otherwise.
+### The answers
 
-### Blocking a named task
+| Item | Answer | Date | Effect |
+|---|---|---|---|
+| **P-1** | **All eighteen phantom paths are real commitments.** Content ships within **thirty days of 8 September 2026** — by **8 October 2026**. The declarations stay. | 8 Sep | **Changes what B-4, B-5 and B-6 do.** They become **verification** tasks run *after* content lands, not removal tasks. See "What this reverses" below. |
+| **P-2** | **Formspree**, form ID `xjyvaqnb`, endpoint `https://formspree.io/f/xjyvaqnb`. Both homepage forms use it. Free tier, **50 submissions/month**. | 8 Sep | Unblocks **B-8**, first of three. |
+| **P-3** | **WhatsApp `0703308873`.** Confirmed by the convener as the shop's number, **knowingly shared** with the Swaka Advocates site. | 8 Sep | Unblocks **B-8**, second of three. |
+| **P-4 / P-10** | **Google Workspace** on `infoonairesources.shop`. MX `smtp.google.com` priority 1, at Cloudflare. `info@` is an **alias on `benta@`**, not a second user. **Test message received 8 September.** DKIM TXT `google._domainkey` added 8 September; Cloudflare shows DKIM in use. **SPF and DMARC not yet published** — the convener rules this a follow-up, not a PRE-TASK. | 8 Sep | Unblocks **B-8**, third of three. **B-8 is now fully unblocked.** The advertised address receives mail, so it stays on the site. Open follow-up: SPF and DMARC. |
+| **P-5** | Source **"Deploy from a branch"**, `main`, `/` (root). Custom domain `infoonairesources.shop`, **DNS check successful** (OBSERVED, dashboard, 9 September). **Enforce HTTPS: OFF.** | 9 Sep | **Hosting finding recorded: `http://` is served without redirect to `https://`.** Convener ruling: **do not change inside the freeze.** Added to the post-freeze list beside B-18/B-19, to be enabled **on or after 21 September**, with a `deploys.md` prediction written first. |
+| **P-6 / OD-G** | **Convener Ruling.** Port the four working pages from `infoonairesources-site` into this repository under **B-7**, verify they render, then **archive — not delete** — the second repository. | 8 Sep | Unblocks **B-7**, and **B-6**'s ported-pages branch. Archive step joins **B-18**. |
+| **P-7** | **`Super45` is not the convener.** Identity and access disposition **deferred to B-18**. | 8 Sep | Does not block. Recorded as an **open access question**: an account that is not the convener has access to the repository, and who it is remains unestablished until B-18. |
+| **P-8** | **CONFIRMED OBSERVED** in the Cloudflare dashboard, 8 September: **all apex A records DNS-only (grey cloud)**. AI Crawl Control shows **zero requests**, consistent with unproxied. | 8 Sep | **The control-arm design holds.** The §5.3 paired comparison needs no redesign. This was the one item whose value expired at the boundary; it is answered with four days to spare. |
+| **P-9** | Plan **Free**. DNSSEC **off**. Email Routing **not configured**. **Managed `robots.txt` is switched ON in AI Crawl Control.** | 8 Sep | **STANDING HAZARD, attached to OD-A.** Inert while the zone is unproxied — but **if the shop is ever proxied, it would reinstate the training-crawler blocks that B-2 removed under D-1**, silently and at the edge, over the file the property serves. Not changed. See the hazard note below. |
+| **P-11** | **There is no Month 4. Launch is immediate.** "Launching Month 4" is **false copy**. | 8 Sep | **B-12** replaces it. Also engages **DNC-3**, which protects the stated prices and the PPP ladder — the badge is not a price and is not protected. |
+| **P-12** | **M-Pesa is live.** | 8 Sep | Partially unblocks **B-12**. **Still missing: paybill/till number and account name.** B-12 cannot write payment facts into markup until the convener supplies them, and must not infer them. |
+| **P-13** | Legal entity is **Iman Holdings Ltd**, registered in **Kenya**. | 8 Sep | Unblocks `legalName` for **B-11 item 6** and the entity half of **B-12**. **Still missing: registration number and registered address.** B-11 item 6 asks for an `address` as a `PostalAddress`; P-14 binds, so no address enters markup that the page does not state. |
+| **P-14** | **Remove both unsourced homepage statistics.** | 8 Sep | Unblocks **B-15**, and **changes it from a sourcing task to a removal task**. The stat block goes from four statistics to two, both sourced. |
+| **P-15** | **Instagram `@infoonairesources`** and **X `@info_onai`** exist as live pages. B-11 may reference them. **Any third profile asserted in current markup is unconfirmed and must be dropped** unless the convener names it. | 8 Sep | Unblocks the `sameAs` half of **B-11**. Current markup (`index.html:67`) asserts **three**: Instagram, **LinkedIn**, **TikTok**. Instagram is confirmed; **LinkedIn and TikTok are dropped**. **X `@info_onai` is not in the markup today** and may be added. |
+| **P-16** | Assets supplied by the convener. | 9 Sep | **Both verified present on disk**, so nothing is PENDING: `assets/logo.png` (PNG, 1254×1254, 639 KB) and `assets/og-image.jpg` (JPEG, **1200×630**, 52 KB — the standard Open Graph dimension). Unblocks the image half of **B-11**, and with it the `twitter:` tag decision at B-11 item 2. |
+| **P-17** | **All expired listings are closed, not renewed.** | 8 Sep | Unblocks **B-10**. Under **DNC-8 / D-16** they are **marked closed, not withdrawn**. |
+| **P-18** | **The weekly Monday brief begins 14 September 2026.** Recorded as a commitment; copy may state the cadence from that date. | 8 Sep | No task named this as a dependency. It is now a dated commitment, and the copy claim becomes true on 14 September rather than being false today. |
+| **P-19** | **Not verified in Search Console. Convener Ruling:** verify via **DNS TXT record now**; **do not submit the sitemap until after 20 September.** | 9 Sep | The sitemap submission is deliberately held until after the freeze and the boundary. Feeds **B-4** once verification lands. |
+| **P-20** | **Finding, not a question.** GitHub Pages provides **no log access at all**. Recorded. | 8 Sep | Not a gap to close. P-22's African-test amendment governs. The observation instrument in `../../zawawi-observation/` exists because of this. |
 
-| Item | What it asks | Blocks |
+### What this reverses — P-1 and task B-4
+
+**B-4's change specification, as written, says: *"Remove all eighteen phantom entries."*** Its acceptance criterion 1 says *"Every `<loc>` corresponds to a file present in the repository."*
+
+**The convener's ruling on P-1 keeps them.** So until content lands — by 8 October 2026 — the sitemap continues to declare **eighteen URLs that return 404**, and **B-4's acceptance criteria as written cannot pass.** The same holds for **B-5**: `llms.txt` describes ten content areas of which two have pages behind them (see `BRIEF-B-CORRECTIONS.md` C-12).
+
+This is recorded, not contested. The ruling is the convener's to make, and the reasoning — that these are real commitments with a date rather than abandoned paths — is a different factual claim from the one the brief was drafted against. But two consequences follow and should be visible:
+
+1. **B-4, B-5 and B-6 cannot be marked complete before the content ships.** They are now verification tasks with a **dependency on a date, 8 October 2026**, not on an answer.
+2. **The gap between declaration and reality persists for thirty days**, and D-9 and P-14 both speak to it. Nothing in this programme forbids declaring a commitment; what P-14 forbids is asserting in markup a fact the page does not state. A sitemap entry for a page that does not yet exist sits closer to the first than the second, but it is not free of tension, and a reader of the record should see that it was noticed rather than missed.
+
+### Standing hazard — P-9, attached to OD-A
+
+**Cloudflare's Managed `robots.txt` is switched ON in AI Crawl Control.**
+
+It is **inert today**, because the zone is unproxied and confirmed so under P-8. But **OD-A** contemplates proxying this zone after 16 September. If that happens with this setting left on, Cloudflare would serve a managed `robots.txt` at the edge that **reinstates the training-crawler blocks B-2 removed under D-1** — undoing a recorded convener decision, invisibly, without a commit, and without a changelog entry.
+
+**Not changed.** Recorded here and to be re-read at the moment OD-A is decided, not before.
+
+### What is now unblocked, and what still is not
+
+**Fully unblocked and executable:**
+
+| Task | Was blocked on | Note |
 |---|---|---|
-| **P-1** | Which of the eighteen phantom sitemap paths are real commitments, and when | **B-4** (sitemap truth), **B-5** (`llms.txt` truth or removal), **B-6** (navigation repair). One answer unblocks three tasks. |
-| **P-2** | Formspree form ID, or a decision to change provider or remove the forms | **B-8** |
-| **P-3** | WhatsApp number, or a decision to remove the link — it is live in production today | **B-8** |
-| **P-4** | Mail routing for `info@infoonairesources.shop` — no MX exists while thirteen pages advertise it | **B-8** |
-| **P-6** | Disposition of the second repository, which holds working versions of four pages the deployed site 404s on | **B-7**, and **B-6** if pages are being ported |
-| **P-11** | What "Launching Month 4" counts from | **B-12** |
-| **P-12** | Whether M-Pesa is live or still "from launch" | **B-12** |
-| **P-13** | Legal entity behind InfoOnAIResources | **B-12**, and B-11 item 6 (`legalName`, `address`) |
-| **P-14** | Sources for the two unsourced homepage statistics | **B-15** |
-| **P-16** | Whether `/assets/logo.png` and `/assets/og-image.jpg` exist anywhere | **B-11** |
-| **P-17** | Whether the three expired job listings and the course are closed or renewed | **B-10** |
+| **B-8** — conversion repair | P-2, P-3, P-4 | All three answered. **Highest value-per-risk work in either brief.** |
+| **B-7** — restore the missing standard pages | P-6, OD-G | Port from the second repo, verify, then archive it. |
+| **B-10** — mark expired listings | P-17 | Mark closed; do not withdraw (DNC-8). |
+| **B-15** — the two unsourced statistics | P-14 | Now a **removal** task. |
+| **B-13**, **B-14**, **B-17** | never blocked | Landmarks, no-JS legibility, deliberate non-actions. |
 
-### Deadline-critical, blocking no task but conditioning the experiment
+**Unblocked but constrained by sequence or freeze:**
 
-| Item | What it asks | Why it matters now |
-|---|---|---|
-| **P-8** | Confirm the apex and `www` records are DNS-only / unproxied | **The control-arm design rests on this.** If the zone has been proxied since inspection, the §5.3 paired comparison must be redesigned **before** 15 September, not discovered after it. The instrument's own evidence is consistent with unproxied — `server: GitHub.com`, no `cf-ray` on any shop record across 224 requests — but that is inference from outside; the dashboard is the only place it is confirmed. |
-| **P-9** | Whether any Cloudflare feature is active on the zone at all | Same. |
+| Task | Constraint |
+|---|---|
+| **B-11** — dangling references | Image and `sameAs` halves unblocked. Executed **by the generator** under OD-J, so it waits on **B-20**, which waits on block 3A. Also carries the inherited dangling `@id` recorded in the changelog. |
+| **B-6** — navigation repair | Depends on **B-7** landing first. |
+| **B-4**, **B-5** | Now verification tasks; wait on content, **by 8 October 2026**. |
+| **Enforce HTTPS** | Post-freeze, **on or after 21 September**, with a `deploys.md` prediction written first. |
 
-### Not blocking, but unanswered
+**Still carrying a missing input:**
 
-| Item | What it asks | Note |
-|---|---|---|
-| **P-5** | GitHub Pages source branch and folder, "Enforce HTTPS" state, custom-domain verification | Informational. Inventory grades the hosting conclusion inferred. |
-| **P-7** | Whether `Super45` is a second operator account or a collaborator | Feeds **B-18** (repository hygiene, post-deadline). |
-| **P-10** | Why the zone publishes no MX — the DNS-side form of P-4 | Answered together with P-4. |
-| **P-15** | Whether the three `Organization.sameAs` social profiles exist and are active | Feeds **B-11**. They are asserted only inside markup and linked from no visible page. |
-| **P-18** | Whether the weekly-Monday-brief cadence claim is still accurate — one issue exists, dated 21 March 2026 | **No task in the brief names this as a dependency.** It is a truth-of-copy question that will need an owner. |
-| **P-19** | Google Search Console verification state, and what Coverage reports about the eighteen non-existent sitemap URLs | Would supply evidence for **B-4**. |
-| **P-20** | Confirm GitHub Pages provides no log access at all | **Not a gap to close — a finding to record.** P-22's African-test amendment governs. |
+| Task | Missing |
+|---|---|
+| **B-12** — commercial facts as structured data | **M-Pesa paybill/till number and account name.** Also **Iman Holdings Ltd's registration number and registered address**, if an `address` is to be expressed. |
 
-### What is not blocked, and could proceed today
-
-**B-13** (landmarks, no ARIA) and **B-14** (no-JS legibility) carry **no "Depends on" line at all**. **B-17** (deliberate non-actions, recorded) likewise. These are the only substantive tasks currently executable without an answer from the convener.
-
-Everything else in block 3A waits on P-1, P-6, P-14, P-16 or P-17, and everything in 3B waits on B-20, which the Execution Sequence sequences after 3A completes.
+**Nothing in the freeze window changes.** From **12 to 20 September** no crawl directive, canonical, `sitemap.xml`, `robots.txt` or hosting setting moves — Enforce HTTPS included. Content and markup work may proceed, with every deploy recorded in `../../zawawi-observation/deploys.md`.
 
 ---
 
-*Opened 8 September 2026, task DOC-2. Appended to, never rewritten. Decided by: Benta, convener.*
+*Section 3 answered 8–9 September 2026 by Benta, convener, and recorded under task DOC-3. Section 1 and Section 2 are appended to, never rewritten.*
