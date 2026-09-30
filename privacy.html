@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Privacy Policy | InfoOnAIResources</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="What information InfoOnAIResources receives when you use this site, what happens to it, and your rights." />
+  <link rel="canonical" href="https://infoonairesources.shop/privacy.html" />
+  <meta property="og:title" content="Privacy Policy — InfoOnAIResources" />
+  <meta property="og:description" content="What information InfoOnAIResources receives when you use this site, what happens to it, and your rights." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://infoonairesources.shop/privacy.html" />
+  <meta property="og:image" content="https://infoonairesources.shop/assets/og-image.jpg" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{--bg:#080a0e;--surface:#0d1017;--surface-2:#111520;--border:rgba(255,255,255,0.07);--border-bright:rgba(255,255,255,0.12);--text:#eef0f3;--muted:#7a8394;--teal:#2dd4bf;--teal-dim:rgba(45,212,191,0.12);--gold:#f0b429;--font-display:'Fraunces',Georgia,serif;--font-body:'Instrument Sans',system-ui,sans-serif;--font-mono:'DM Mono',monospace;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+    body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-weight:300;line-height:1.7;min-height:100vh;overflow-x:hidden;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 900px 600px at 70% -5%,rgba(45,212,191,0.05) 0%,transparent 60%),radial-gradient(ellipse 700px 500px at -10% 40%,rgba(240,180,41,0.04) 0%,transparent 55%);pointer-events:none;z-index:0;}
+    h1,h2{font-family:var(--font-display);font-weight:700;line-height:1.15;}
+    .container{max-width:960px;margin:0 auto;padding:0 24px;position:relative;z-index:1;}
+    nav{position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border);background:rgba(8,10,14,0.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);}
+    .nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px;gap:24px;}
+    .nav-logo{font-family:var(--font-display);font-weight:900;font-size:17px;color:var(--text);text-decoration:none;letter-spacing:-0.02em;white-space:nowrap;}
+    .nav-logo span{color:var(--teal);}
+    .nav-links{display:flex;align-items:center;gap:6px;list-style:none;flex-wrap:wrap;}
+    .nav-links a{font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:6px;transition:color .2s,background .2s;}
+    .nav-links a:hover{color:var(--text);background:var(--surface-2);}
+    .breadcrumb{font-family:var(--font-mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);padding:28px 0 0;}
+    .breadcrumb a{color:var(--muted);text-decoration:none;}.breadcrumb a:hover{color:var(--teal);}
+    .breadcrumb span{color:var(--border-bright);margin:0 8px;}
+    header.page{padding:24px 0 8px;}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);background:var(--teal-dim);padding:6px 14px;border-radius:999px;margin-bottom:22px;}
+    h1{font-size:clamp(30px,5vw,44px);letter-spacing:-0.02em;margin-bottom:12px;}
+    .lead{color:#c9cfda;max-width:64ch;}
+    .updated{font-family:var(--font-mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);margin-top:14px;}
+    .prose{max-width:68ch;margin-top:8px;}
+    .prose h2{font-size:22px;margin:40px 0 10px;}
+    .prose h3{font-family:var(--font-body);font-weight:600;font-size:15px;color:var(--text);margin:24px 0 6px;}
+    .prose p,.prose li{color:#c9cfda;font-size:15px;}
+    .prose p{margin:0 0 14px;}
+    .prose ul{margin:0 0 16px 20px;}
+    .prose li{margin:0 0 6px;}
+    .prose a{color:var(--teal);}
+    .list{margin:14px 0 0;display:grid;gap:14px;}
+    .item{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 24px;transition:background .2s,border-color .2s,transform .2s;}
+    .item:hover{background:var(--surface-2);border-color:var(--border-bright);transform:translateY(-2px);}
+    .item .kicker{font-family:var(--font-mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--teal);}
+    .item h2{font-size:19px;margin:6px 0 6px;}
+    .item p{color:#c9cfda;font-size:14px;}
+    .provenance{max-width:68ch;font-size:12px;color:var(--muted);border-top:1px solid var(--border);margin-top:40px;padding-top:16px;}
+    footer{border-top:1px solid var(--border);margin-top:48px;padding:36px 0;}
+    .footer-inner{max-width:1100px;margin:0 auto;padding:0 24px;}
+    .footer-brand{font-family:var(--font-display);font-weight:900;font-size:16px;}
+    .footer-brand span{color:var(--teal);}
+    .footer-legal{font-size:12px;color:var(--muted);margin-top:10px;}
+    .footer-legal a{color:inherit;}
+  </style>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="InfoOnAIResources Home">Info<span>OnAI</span>Resources</a>
+      <ul class="nav-links" role="list">
+        <li><a href="/opportunities/">Opportunities</a></li>
+        <li><a href="/deep-dives/">Deep Dives</a></li>
+        <li><a href="/tools/">Tools</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>Privacy</nav>
+
+    <header class="page">
+      <div class="eyebrow">Privacy</div>
+      <h1>Privacy Policy</h1>
+      <p class="lead">What information InfoOnAIResources receives when you use this site, what happens to it, and what you can ask us to do about it. It describes only what the site does today.</p>
+      <p class="updated">Last updated: 30 September 2026</p>
+    </header>
+
+
+    <div class="prose">
+      <h2>Who we are</h2>
+      <p>InfoOnAIResources is operated by Iman Holdings Ltd, a company registered in Kenya. Iman Holdings Ltd is responsible for the personal information described in this policy.</p>
+      <p>Iman Holdings Ltd, P.O. Box 12803-00100, Nairobi, Kenya. Email: <a href="mailto:info@infoonairesources.shop">info@infoonairesources.shop</a>.</p>
+
+      <h2>The short version</h2>
+      <ul>
+        <li>This site sets no cookies and runs no analytics or advertising trackers.</li>
+        <li>If you subscribe to the Weekly Intelligence Brief, we receive your email address.</li>
+        <li>If you email us or message us on WhatsApp, we receive what you send.</li>
+        <li>If you pay through M-Pesa, the transaction record gives us your name and phone number.</li>
+        <li>The service that hosts this site and the service that supplies its fonts receive technical information from your browser when a page loads, as they would for any website that uses them.</li>
+        <li>We never sell your information.</li>
+      </ul>
+
+      <h2>What we receive, and how</h2>
+
+      <h3>When you subscribe to the Weekly Intelligence Brief</h3>
+      <p>The subscribe forms on the homepage ask for one thing: your email address. When you submit a form, your email address is sent to Formspree, a third-party form service, which delivers the submission to us. The form also contains two fields you do not fill in: one tells Formspree which page to return you to, and one is left empty so that automated spam can be filtered out. After you submit, you see a confirmation page on Formspree's own website, which is covered by <a href="https://formspree.io/legal/privacy-policy/">Formspree's privacy policy</a>.</p>
+      <p>Your email address is held in our Google Workspace mailbox. The Weekly Intelligence Brief is sent to you by email from <a href="mailto:info@infoonairesources.shop">info@infoonairesources.shop</a>.</p>
+      <p>Formspree also keeps its own copy of each submission, under its privacy policy. We delete those copies periodically.</p>
+      <p>To unsubscribe, reply to any issue of the brief, or email <a href="mailto:info@infoonairesources.shop">info@infoonairesources.shop</a> with the word “unsubscribe”.</p>
+
+      <h3>When you email us</h3>
+      <p>Email sent to <a href="mailto:info@infoonairesources.shop">info@infoonairesources.shop</a> is delivered to our Google Workspace mailbox. We receive your email address, your name if your email includes it, and what you write, and we use them to reply to you.</p>
+
+      <h3>When you message us on WhatsApp</h3>
+      <p>The WhatsApp links on this site open a WhatsApp conversation with the number shown on our <a href="/contact.html">Contact page</a>. Opening a link sends nothing to us. If you then send a message, we receive your phone number, your WhatsApp profile name and your message, and we use them to reply to you. WhatsApp, operated by Meta, handles that message under <a href="https://www.whatsapp.com/legal/privacy-policy">WhatsApp's privacy policy</a>.</p>
+      <p>We send the Weekly Intelligence Brief by WhatsApp only to subscribers who specifically ask to receive it there. If you ask, we use your phone number to send it to you, and you can stop it by replying to any issue.</p>
+
+      <h3>When any page loads</h3>
+      <p>This site is hosted on GitHub Pages, operated by GitHub. When your browser requests a page, GitHub's servers receive the technical information every browser sends, including your IP address, your browser type and the page requested. We do not receive these records and have no access to them. <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a> applies.</p>
+      <p>Every page on this site uses fonts supplied by Google Fonts. To display them, your browser connects to Google's servers, which receive your IP address and browser information. Google explains how it handles this in its <a href="https://fonts.google.com/faq#privacy">Google Fonts privacy information</a>.</p>
+
+      <h3>What this site does not do</h3>
+      <p>This site sets no cookies. It uses no analytics, no advertising or social-media tracking, and no embedded third-party content. The only scripts on the site display the current year and, on the homepage, reveal sections as you scroll and open and close the answers to common questions. None of them collects or sends information.</p>
+
+      <h3>Links to other websites</h3>
+      <p>Opportunity listings link to the source organisation's own application page — you always apply on their site, never here. We receive nothing you submit to those sites, and their own privacy policies apply.</p>
+
+      <h2>Payments</h2>
+      <p>Where payments are offered, they are made through Safaricom M-Pesa. This site does not collect payment information.</p>
+      <p>When you pay, the M-Pesa transaction record gives us your name and phone number. We keep these records for accounting.</p>
+
+      <h2>Why we use your information</h2>
+      <p>We use your information to send you what you asked for and to respond to you. We never sell it.</p>
+      <p>We send you the Weekly Intelligence Brief because you have consented to receive it, and you can withdraw that consent at any time by unsubscribing. When we reply to an enquiry, we rely on our legitimate interest in responding to people who contact us.</p>
+
+      <h2>Where your information is processed</h2>
+      <p>Three of the services named in this policy process information outside Kenya:</p>
+      <ul>
+        <li><strong>Formspree</strong>, which receives subscribe-form submissions, processes information in the United States and other countries where it operates.</li>
+        <li><strong>Google</strong>, which provides our Google Workspace mailbox and Google Fonts, processes information on servers around the world, including outside Kenya.</li>
+        <li><strong>GitHub</strong>, which hosts this site, processes information in the United States and other countries where it or its subprocessors operate.</li>
+      </ul>
+      <p>Each relies on the safeguards for international transfers set out in its own published privacy policy, linked above.</p>
+
+      <h2>How long we keep it</h2>
+      <ul>
+        <li>Subscriber email addresses are kept until you unsubscribe.</li>
+        <li>If you receive the brief on WhatsApp, your phone number is kept until you unsubscribe.</li>
+        <li>Correspondence about enquiries, by email or WhatsApp, is kept for 12 months.</li>
+        <li>M-Pesa transaction records, including your name and phone number, are kept for accounting.</li>
+        <li>Formspree's copies of form submissions are kept until we delete them, which we do periodically.</li>
+      </ul>
+
+      <h2>Your rights</h2>
+      <p>Under Kenya's Data Protection Act, 2019, you have rights over your personal data, including the right to be informed about how it is used, to access it, to object to its processing, and to have inaccurate data corrected or deleted. To exercise any of these rights, email <a href="mailto:info@infoonairesources.shop">info@infoonairesources.shop</a>.</p>
+      <p>If you are not satisfied with our response, you can complain to the <a href="https://www.odpc.go.ke/">Office of the Data Protection Commissioner</a>.</p>
+
+      <h2>Children</h2>
+      <p>This site and the Weekly Intelligence Brief are not directed at people under 18, and we do not knowingly collect personal information from them.</p>
+
+      <h2>Security</h2>
+      <p>Pages on this site are served over HTTPS.</p>
+
+      <h2>Changes to this policy</h2>
+      <p>When what the site does changes, we update this policy and the date at the top of this page.</p>
+
+      <h2>Contact</h2>
+      <p>Iman Holdings Ltd, P.O. Box 12803-00100, Nairobi, Kenya · <a href="mailto:info@infoonairesources.shop">info@infoonairesources.shop</a></p>
+    </div>
+
+    <p class="provenance">Parts of this page were drafted with AI assistance. Editorial responsibility rests with Benta, InfoOnAIResources.</p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Info<span>OnAI</span>Resources</div>
+      <p class="footer-legal">© 2026 InfoOnAIResources.shop &nbsp;·&nbsp; Nairobi, Kenya &nbsp;·&nbsp; <a href="mailto:info@infoonairesources.shop">info@infoonairesources.shop</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms</a></p>
+    </div>
+  </footer>
+</body>
+</html>

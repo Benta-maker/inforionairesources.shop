@@ -6,7 +6,7 @@
 #
 # Rights reservation: the publisher reserves its rights in the content of this
 # site. This is a claim-preserving statement, not an access control, and it is
-# not represented as enforceable.
+# not represented as enforceable. Human-readable equivalent: /terms.html
 #
 # Previous version (March 2026) blocked nine named training crawlers. Those
 # blocks are removed under D-1: blocking training crawlers also blocks Googlebot,

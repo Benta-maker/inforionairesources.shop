@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>About | InfoOnAIResources</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="InfoOnAIResources is a global AI intelligence and opportunity platform connecting innovation ecosystems worldwide, with particular attention to Africa, South Asia and the Middle East and North Africa." />
+  <link rel="canonical" href="https://infoonairesources.shop/about.html" />
+  <meta property="og:title" content="About — InfoOnAIResources" />
+  <meta property="og:description" content="InfoOnAIResources is a global AI intelligence and opportunity platform connecting innovation ecosystems worldwide, with particular attention to Africa, South Asia and the Middle East and North Africa." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://infoonairesources.shop/about.html" />
+  <meta property="og:image" content="https://infoonairesources.shop/assets/og-image.jpg" />
+  <meta name="robots" content="index, follow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,300;1,9..144,700&family=DM+Mono:wght@300;400;500&family=Instrument+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{--bg:#080a0e;--surface:#0d1017;--surface-2:#111520;--border:rgba(255,255,255,0.07);--border-bright:rgba(255,255,255,0.12);--text:#eef0f3;--muted:#7a8394;--teal:#2dd4bf;--teal-dim:rgba(45,212,191,0.12);--gold:#f0b429;--font-display:'Fraunces',Georgia,serif;--font-body:'Instrument Sans',system-ui,sans-serif;--font-mono:'DM Mono',monospace;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;}
+    body{background:var(--bg);color:var(--text);font-family:var(--font-body);font-weight:300;line-height:1.7;min-height:100vh;overflow-x:hidden;}
+    body::before{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 900px 600px at 70% -5%,rgba(45,212,191,0.05) 0%,transparent 60%),radial-gradient(ellipse 700px 500px at -10% 40%,rgba(240,180,41,0.04) 0%,transparent 55%);pointer-events:none;z-index:0;}
+    h1,h2{font-family:var(--font-display);font-weight:700;line-height:1.15;}
+    .container{max-width:960px;margin:0 auto;padding:0 24px;position:relative;z-index:1;}
+    nav{position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border);background:rgba(8,10,14,0.85);backdrop-filter:blur(20px) saturate(180%);-webkit-backdrop-filter:blur(20px) saturate(180%);}
+    .nav-inner{max-width:1100px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:60px;gap:24px;}
+    .nav-logo{font-family:var(--font-display);font-weight:900;font-size:17px;color:var(--text);text-decoration:none;letter-spacing:-0.02em;white-space:nowrap;}
+    .nav-logo span{color:var(--teal);}
+    .nav-links{display:flex;align-items:center;gap:6px;list-style:none;flex-wrap:wrap;}
+    .nav-links a{font-family:var(--font-mono);font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:6px;transition:color .2s,background .2s;}
+    .nav-links a:hover{color:var(--text);background:var(--surface-2);}
+    .breadcrumb{font-family:var(--font-mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);padding:28px 0 0;}
+    .breadcrumb a{color:var(--muted);text-decoration:none;}.breadcrumb a:hover{color:var(--teal);}
+    .breadcrumb span{color:var(--border-bright);margin:0 8px;}
+    header.page{padding:24px 0 8px;}
+    .eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-mono);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;color:var(--teal);border:1px solid rgba(45,212,191,0.25);background:var(--teal-dim);padding:6px 14px;border-radius:999px;margin-bottom:22px;}
+    h1{font-size:clamp(30px,5vw,44px);letter-spacing:-0.02em;margin-bottom:12px;}
+    .lead{color:#c9cfda;max-width:64ch;}
+    .updated{font-family:var(--font-mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--muted);margin-top:14px;}
+    .prose{max-width:68ch;margin-top:8px;}
+    .prose h2{font-size:22px;margin:40px 0 10px;}
+    .prose h3{font-family:var(--font-body);font-weight:600;font-size:15px;color:var(--text);margin:24px 0 6px;}
+    .prose p,.prose li{color:#c9cfda;font-size:15px;}
+    .prose p{margin:0 0 14px;}
+    .prose ul{margin:0 0 16px 20px;}
+    .prose li{margin:0 0 6px;}
+    .prose a{color:var(--teal);}
+    .list{margin:14px 0 0;display:grid;gap:14px;}
+    .item{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px 24px;transition:background .2s,border-color .2s,transform .2s;}
+    .item:hover{background:var(--surface-2);border-color:var(--border-bright);transform:translateY(-2px);}
+    .item .kicker{font-family:var(--font-mono);font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:var(--teal);}
+    .item h2{font-size:19px;margin:6px 0 6px;}
+    .item p{color:#c9cfda;font-size:14px;}
+    .provenance{max-width:68ch;font-size:12px;color:var(--muted);border-top:1px solid var(--border);margin-top:40px;padding-top:16px;}
+    footer{border-top:1px solid var(--border);margin-top:48px;padding:36px 0;}
+    .footer-inner{max-width:1100px;margin:0 auto;padding:0 24px;}
+    .footer-brand{font-family:var(--font-display);font-weight:900;font-size:16px;}
+    .footer-brand span{color:var(--teal);}
+    .footer-legal{font-size:12px;color:var(--muted);margin-top:10px;}
+    .footer-legal a{color:inherit;}
+  </style>
+</head>
+<body>
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="InfoOnAIResources Home">Info<span>OnAI</span>Resources</a>
+      <ul class="nav-links" role="list">
+        <li><a href="/opportunities/">Opportunities</a></li>
+        <li><a href="/deep-dives/">Deep Dives</a></li>
+        <li><a href="/tools/">Tools</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span>About</nav>
+
+    <header class="page">
+      <div class="eyebrow">About</div>
+      <h1>About InfoOnAIResources</h1>
+    </header>
+
+
+    <div class="prose">
+      <h2>Who We Are</h2>
+      <p>InfoOnAIResources is a global AI intelligence and opportunity platform connecting innovation ecosystems worldwide, with particular attention to Africa, South Asia and the Middle East and North Africa.</p>
+      <p>We make technological developments accessible by connecting information with educational opportunities, professional resources, research, practical applications and international collaboration.</p>
+      <p>We recognise that innovation is not confined to established technology centres. Knowledge, expertise and technological solutions emerge from diverse geographical regions and professional communities.</p>
+      <p>Our purpose is to connect these contributions, facilitate the exchange of knowledge and make meaningful participation in technological advancement more accessible.</p>
+
+      <h2>Our Vision</h2>
+      <p>A globally connected innovation ecosystem in which knowledge, expertise and opportunities move across geographical boundaries, enabling individuals and organisations to participate in and contribute to technological advancement.</p>
+
+      <h2>Our Mission</h2>
+      <p>We connect global innovation ecosystems, transforming the exchange of knowledge, technology and expertise into opportunities, partnerships and actionable intelligence for professionals, students and entrepreneurs across Africa, South Asia, MENA and beyond.</p>
+      <p>Innovation flows in every direction. Opportunity should too.</p>
+
+      <h2>What you will find here</h2>
+      <ul>
+        <li><strong>The Weekly Intelligence Brief</strong> — every Monday, free. <a href="/#subscribe">Subscribe on the homepage</a>.</li>
+        <li><strong><a href="/opportunities/">The Opportunity Database</a></strong> — AI jobs, scholarships and fellowships, programmes and grants. Every listing links directly to the source organisation's own application page; you always apply on their site, never here.</li>
+        <li><strong><a href="/deep-dives/">Deep Dives</a></strong> — long-form analysis translating major AI developments into industry-specific implications.</li>
+      </ul>
+
+      <h2>Who runs InfoOnAIResources</h2>
+      <p>InfoOnAIResources is operated by Iman Holdings Ltd, a company registered in Kenya, and is based in Nairobi, Kenya.</p>
+
+      <h2>How we use AI in our own work</h2>
+      <p>Some of what we publish is drafted with AI assistance. From September 2026, new content drafted with AI assistance carries a statement saying so, and names the person who holds editorial responsibility for it.</p>
+
+      <h2>Contact</h2>
+      <p>Email <a href="mailto:info@infoonairesources.shop">info@infoonairesources.shop</a>, or see <a href="/contact.html">all the ways to reach us</a>. How we handle what you send us is set out in our <a href="/privacy.html">privacy policy</a>.</p>
+    </div>
+
+    <p class="provenance">Parts of this page were drafted with AI assistance. Editorial responsibility rests with Benta, InfoOnAIResources.</p>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">Info<span>OnAI</span>Resources</div>
+      <p class="footer-legal">© 2026 InfoOnAIResources.shop &nbsp;·&nbsp; Nairobi, Kenya &nbsp;·&nbsp; <a href="mailto:info@infoonairesources.shop">info@infoonairesources.shop</a> &nbsp;·&nbsp; <a href="/privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="/terms.html">Terms</a></p>
+    </div>
+  </footer>
+</body>
+</html>
