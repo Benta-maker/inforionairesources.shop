@@ -1,6 +1,6 @@
 # InfoOnAIResources
 
-> InfoOnAIResources is the AI opportunity intelligence platform for the Global South. It translates Silicon Valley's AI output — model releases, tool launches, policy changes, job market shifts — into actionable intelligence for professionals, students, and entrepreneurs across Africa, South Asia, and MENA. No jargon. No hype. Just what matters for where you are.
+> InfoOnAIResources is the AI opportunity intelligence platform for the Global South. It translates Silicon Valley's AI output — model releases, tool launches, policy changes, job market shifts — into actionable intelligence for professionals, students, and entrepreneurs across Africa, South Asia, and MENA. What matters. What's relevant. What comes next.
 
 InfoOnAIResources was founded in Nairobi, Kenya. It publishes a weekly intelligence brief delivered via email and WhatsApp, maintains a live opportunity database of AI jobs, scholarships, and fellowships, provides plain-language AI policy updates, curates AI tools translated for non-technical professionals, and produces industry-specific deep dive analysis for healthcare, legal, finance, education, and agriculture professionals. The platform serves professionals, students, and entrepreneurs across Africa, South Asia, and the Middle East and North Africa region.
 
