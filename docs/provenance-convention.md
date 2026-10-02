@@ -42,6 +42,8 @@ Among the material facts behind D-14: Kenya's Bill expresses a human-dignity int
 
 **Why the second sentence names a person and not the property.** D-9's principle is that a machine-facing signal must be attributable to a **named human decision**. "InfoOnAIResources" is an entity; an entity cannot hold editorial responsibility, and a statement that assigns it to one discharges nothing. The name is what makes the sentence mean something. Ruled by the convener, 3 September 2026.
 
+**2 October 2026 — on-page statement withdrawn site-wide by convener decision (DOC-9 ruling 13). The commit-message declaration continues.**
+
 ### A note on the specified form
 
 Brief A task A-12 reads *"in the form the advocate approves"*. Here it reads **"in the form the convener approves"**.
